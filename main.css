@@ -39,6 +39,7 @@ body{
 }
 
 .title h1{
+  animation: title 3s 1 0s linear;
   font-family: 'Nunito', sans-serif;
   opacity: 0.98;
   font-size: 43px;
@@ -56,6 +57,7 @@ body{
   height: 40px;
   border-radius: 40px;
   padding: 10px;
+    animation: yourAnimation 3s 1 0s linear;
 }
 
 .input-box{
@@ -93,4 +95,43 @@ body{
 .search-bar:hover .input-box{
   width: 400px;
   padding-left: 10px;
+}
+
+footer{
+  bottom: 0;
+  height: 25px;
+}
+
+footer i {
+  bottom: 0;
+  float:left;
+  font-size: 15px;
+}
+
+@keyframes title{
+    0%{
+        transform: rotate(xx) translateY(-90%);
+        opacity: 0;
+        }
+    48%{
+        transform: translateY(-40%);
+        opacity: 0.5;
+        }
+    100%{
+        transform: rotate(xx);
+        font-weight: 400;
+        }
+}
+
+@keyframes yourAnimation{
+    0%{
+        opacity: 0;
+        }
+    50%{
+        opacity: 0.5;
+        }
+    100%{
+        transform: rotate(xx);
+        opacity: 1;
+        }
 }
