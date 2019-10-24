@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>homepage</title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
+    <link href="https://fonts.googleapis.com/css?family=Caveat|Fredoka+One|Modak|Nunito|Pacifico|Righteous&display=swap" rel="stylesheet">
+  </head>
+  <script type="text/javascript">
+      var coll = document.getElementsByClassName("collapsible");
+      var i;
+      for (i = 0; i < coll.length; i++) {
+        coll[i].addEventListener("click", function() {
+          this.classList.toggle("active");
+          var content = this.nextElementSibling;
+            if (content.style.display === "block") {
+              content.style.display = "none";
+            } else {
+              content.style.display = "block";
+            }
+          });
+      }
+
+    function handleEnter(e){
+    var keycode = (e.keyCode ? e.keyCode : e.which);
+      if (keycode == '13') {
+          search();
+      }
+    };
+    function Search() {
+        var userInput= document.getElementById('searchterm').value;
+        var link= document.getElementById('reflectedlink');
+        link.href = "http://www.duckduckgo.com?q=" + userInput;
+    };
+  </script>
+  <header>
+    <div class="left">
+
+      </div>
+      <div class="icon1">
+
+      </div>
+      <div class="icon2">
+
+      </div>
+    <div class="right">
+
+    </div>
+  </header>
+  <body>
+      <div class="container">
+        <div class="title">
+          <h1>Welcome back Matthieu.</h1>
+        </div>
+      </div>
+      <div class="search-bar">
+        <input id="searchterm" class="input-box" placeholder="search...">
+        <a class="btn" id="reflectedlink" onclick="Search()" onkeypress="handleEnter(event)" href="">
+          <i class="fas fa-search"></i>
+        </a>
+      </div>
+  </body>
+  <footer>
+
+  </footer>
+</html>
